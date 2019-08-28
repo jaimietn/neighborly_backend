@@ -5,7 +5,7 @@ class Api::V1::AuthController < ApplicationController
     token = request.headers["Authorization"]
     user_id = JWT.decode(token, "secret")[0]["user_id"]
     user = User.find(user_id)
-    render json: {user: user.username, id: user.id}
+    render json: {username: user.username, id: user.id}
   end
 
   def create

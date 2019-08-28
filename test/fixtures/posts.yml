@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  longitude: 9.99
+  latitude: 9.99
+  posted: 2019-08-28
+  expires: 2019-08-28
+  category: MyString
+  title: MyString
+  content: MyText
+  image: MyString
+  comments: MyString
+
+two:
+  user: two
+  longitude: 9.99
+  latitude: 9.99
+  posted: 2019-08-28
+  expires: 2019-08-28
+  category: MyString
+  title: MyString
+  content: MyText
+  image: MyString
+  comments: MyString
