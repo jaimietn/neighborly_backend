@@ -22,7 +22,7 @@ class Api::V1::PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
     @post.update(post_params)
-    render json: @post.to_json
+    render json: @post
   end
 
   def destroy
@@ -33,7 +33,7 @@ class Api::V1::PostsController < ApplicationController
   private
 
     def post_params
-      params.require(:post).permit(:user_id)
+      params.require(:post).permit(:id, :user_id, :longitude, :latitude, :posted, :expires, :category, :title, :content, :image)
     end
 
 end
