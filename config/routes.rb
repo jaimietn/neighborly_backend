@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       get '/retrieve_user', to: 'auth#retrieve'
       post '/login', to: 'auth#create'
       post '/signup', to: 'users#create'
+      post '/', to: 'posts#create'
       get '/profile', to: 'users#profile'
     end
   end

@@ -33,7 +33,7 @@ class Api::V1::PostsController < ApplicationController
   private
 
     def post_params
-      params.require(:post).permit(:id, :user_id, :longitude, :latitude, :posted, :expires, :category, :title, :content, :image)
+      params.require(:post).permit(:id, :user_id, :username, :longitude, :latitude, :posted, :expires, :category, :title, :content, :image)
     end
 
 end
