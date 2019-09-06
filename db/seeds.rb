@@ -1,3 +1,35 @@
+#Users
+
+username: "Jaimie",
+avatar: null,
+bio: null
+
+User.create(username: "Bobby", password: "password", avatar: "https://pbs.twimg.com/profile_images/595596215275884544/DvU0Um55_400x400.png", bio: "I'm a kid")
+
+#Posts
+
+user_id: 1,
+username: null,
+latitude: null,
+longitude: null,
+posted: null,
+expires: null,
+category: null,
+title: null,
+content: null,
+image: null,
+neighborhood: null,
+
+#Messages
+
+t.string "title"
+t.string "content"
+t.date "sent"
+t.bigint "post_id"
+t.bigint "sender_id"
+t.bigint "recipient_id"
+
+
 # Create User Instance:
 # User.create(username: "Bobby", password: "password", avatar: "https://pbs.twimg.com/profile_images/595596215275884544/DvU0Um55_400x400.png", bio: "I'm a kid")
 
@@ -8,20 +40,3 @@
 
 # update instance attributes: User.where(:id => 2).first.update_attributes(:username => 'Kevin')
 # update instance attributes: Post.where(:id => ).first.update_attributes(:category => '')
-
-# Post Categories:
-# Animal Sightings
-# Candid Camera
-# Free Stuff
-# General Notes
-# Items For Sale
-# Live Music
-# Lost or Found Items
-# Lost or Found Pets
-# Missed Connections
-# Need Help
-# Neighborhood Events
-# Other
-# Protest Events
-# Safety Concerns
-# Thank You Notes

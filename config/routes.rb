@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :users
       resources :posts
+      resources :messages
       get '/retrieve_user', to: 'auth#retrieve'
       post '/login', to: 'auth#create'
       post '/signup', to: 'users#create'
