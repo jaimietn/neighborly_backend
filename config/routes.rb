@@ -10,6 +10,7 @@ Rails.application.routes.draw do
       post '/', to: 'posts#create'
       get '/profile', to: 'users#profile'
       delete '/profile', to: 'posts#destroy'
+      delete '/messages', to: 'messages#destroy'
     end
   end
 end
