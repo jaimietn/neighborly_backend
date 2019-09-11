@@ -3,7 +3,7 @@ class Api::V1::AuthController < ApplicationController
 
   def retrieve
     token = request.headers["Authorization"]
-    user_id = JWT.decode(token, "secret")[0]["user_id"]
+    user_id = JWT.decode(token, ENV["SECRET_TOKEN"])[0]["user_id"]
     user = User.find(user_id)
     render json: {username: user.username, id: user.id}
   end
@@ -11,7 +11,7 @@ class Api::V1::AuthController < ApplicationController
   def create
     user = User.find_by(username: params[:username])
     if user && user.authenticate(params[:password])
-      token = JWT.encode({ user_id: user.id }, "secret")
+      token = JWT.encode({ user_id: user.id }, ENV["SECRET_TOKEN"])
       render json: { token: token, user: { id: user.id, username: user.username } }
     else
       render json: {err: "something went wrong or username not found or password incorrect or idk"}

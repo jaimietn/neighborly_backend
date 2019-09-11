@@ -14,7 +14,7 @@ class Api::V1::UsersController < ApplicationController
   def create
     user = User.new(user_params)
     if(user.save)
-      token = JWT.encode({user_id: user.id}, "secret")
+      token = JWT.encode({user_id: user.id}, ENV["SECRET_TOKEN"])
       render json: {token: token, user: user }
     else
       render json: {err: "lol idk"}
