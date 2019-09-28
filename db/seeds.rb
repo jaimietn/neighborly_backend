@@ -22,6 +22,7 @@ User.create(username: "Lily", password: "lily", avatar: "http://ap.rdcpix.com/18
 
 ## User create ##
 # User.create(username: "", password: "", avatar: "", bio: "")
+# User.create(username: "", password: "", avatar: "", bio: "")
 
 puts "Made some users!"
 
