@@ -3,4 +3,5 @@ class Message < ApplicationRecord
   belongs_to :recipient, class_name: "User"
   belongs_to :post
   #test test
+    #test test
 end
